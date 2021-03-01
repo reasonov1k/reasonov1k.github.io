@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Ferocity";
+  src: url(ferocity/Ferocity.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "ArodoraPro";
+  src: url(arodorapro/ArodoraPro-Light.otf);
+  font-style: normal;
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "Furore";
+  src: url(furore.ttf);
+  font-style: normal;
+  font-weight: normal;
+}

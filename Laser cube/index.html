@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Laser cube</title>
+  <link href="https://allfont.ru/allfont.css?fonts=furore" rel="stylesheet" type="text/html">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="phoneAdaptive.css">
+  <link rel="stylesheet" href="heightAdaptive.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <section class="main-page" ref="page-1">
+      <div class="container">
+        <header class="main-header">
+          <ul class="header__list">
+            <li class="header__item header__follow">Follow us</li>
+            <li class="header__link">
+              <a href="index.html" class="header__item header__item1">
+                <img src="image/email.png" width="19px" height="19px">
+              </a>
+            </li>
+            <li class="header__link">
+              <a href="index.html" class="header__item">
+                <img src="image/whats.png" width="19px" height="19px">
+              </a>
+            </li>
+          </ul>
+        </header>
+        <div class="fixed">
+          <span class="header__number">+7(999) 999 99 99</span>
+          <button class="menu__open" @click="openMenu">
+            <svg class="menu__svg menu__svg1" xmlns="http://www.w3.org/2000/svg" width="41px" height="4px">
+              <path fill-rule="evenodd"  stroke="rgb(0, 0, 0)" stroke-width="4px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+              d="M2.000,2.000 L37.000,2.000 "/>
+            </svg><br>
+            <svg class="menu__svg menu__svg2" xmlns="http://www.w3.org/2000/svg" width="41px" height="4px">
+              <path fill-rule="evenodd"  stroke="rgb(0, 0, 0)" stroke-width="4px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+              d="M2.000,2.000 L37.000,2.000 "/>
+            </svg><br>
+            <svg class="menu__svg menu__svg3" xmlns="http://www.w3.org/2000/svg" width="41px" height="4px">
+              <path fill-rule="evenodd"  stroke="rgb(0, 0, 0)" stroke-width="4px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+              d="M2.000,2.000 L37.000,2.000 "/>
+            </svg>
+          </button>
+          <div class="main-menu" ref="mainMenu">
+            <ul class="menu__list">
+              <li>
+                <button class="menu__item menu__item1" @click="openPage(1)">Главное меню</button>
+              </li>
+              <li>
+                <button class="menu__item" @click="openPage(2)">Возможности</button>
+              </li>
+              <li>
+                <button class="menu__item" @click="openPage(3)">Эксплуатация</button>
+              </li>
+              <li>
+                <button class="menu__item" @click="openPage(4)">Отзывы</button>
+              </li>
+              <li>
+                <button class="menu__item" @click="openPage(5)">Контакты</button>
+              </li>
+            </ul>
+            <div class="menu__line" ref="menuLine">
+              <img class="menu__active" src="image/eclipseSmall.png" ref="menuActive">
+              <div class="menu__eclipse menu__eclipse1"></div>
+              <div class="menu__eclipse menu__eclipse2"></div>
+              <div class="menu__eclipse menu__eclipse3"></div>
+              <div class="menu__eclipse menu__eclipse4"></div>
+              <div class="menu__eclipse menu__eclipse5"></div>
+            </div>
+          </div>
+          <button class="next-page">
+            Вперед<br>
+            <img src="image/arrow.png">
+          </button>
+        </div>
+        <h2 class="main-page__caption">Laser show</h2>
+        <img class="caption-image" src="image/lasercube.png">
+        <p class="main__text">новый уровень вечеринок с лазерной установкой</p>
+        <button class="buy-button" @click="openPage(5)">
+          <img src="image/buyButton.png">
+        </button>
+      </div>
+    </section>
+    <section class="opportunities-page" ref="page-2">
+      <div class="container2">
+        <h2 class="opportunities__caption caption">Возможности</h2>
+        <div class="opportunities__list">
+
+            <div class="opportunities__item opportunities__item1 oppAnimate">
+              <button class="eclipse" @click="oppButton(0)">
+                <img src="image/eclipse1.png" class="opportunities__item__background">
+              </button>
+              <span class="opportunities__item__name opportunities__item__name1">Задавай свои рисунки</span>
+            </div>
+
+          <div class="opportunities__item opportunities__item2 oppAnimate">
+            <button class="eclipse" @click="oppButton(1)">
+              <img src="image/eclipse2.png" class="opportunities__item__background">
+            </button>
+            <span class="opportunities__item__name opportunities__item__name2">Изменяй цвет</span>
+          </div>
+          <div class="opportunities__item opportunities__item3 oppAnimate">
+            <button class="eclipse" @click="oppButton(2)">
+              <img src="image/eclipse3.png" class="opportunities__item__background background3">
+            </button>
+            <span class="opportunities__item__name opportunities__item__name3">Масштабируй</span>
+          </div>
+          <div class="opportunities__item opportunities__item4 oppAnimate">
+            <button class="eclipse" @click="oppButton(3)">
+              <img src="image/eclipse4.png" class="opportunities__item__background background4">
+            </button>
+            <span class="opportunities__item__name opportunities__item__name4">Задавай скорость движения</span>
+          </div>
+          <div class="opportunities__item opportunities__item5 oppAnimate">
+            <button class="eclipse" @click="oppButton(4)">
+              <img src="image/eclipse5.png" class="opportunities__item__background background5">
+            </button>
+            <span class="opportunities__item__name opportunities__item__name5">Задавай скорость вращения</span>
+          </div>
+        </div>
+        <img src="image/circle.png" class="opportunities__circle">
+        <div class="opportunities__gif">
+          <img class="oppImage" src="">
+        </div>
+      </div>
+    </section>
+    <section class="instruction-page" ref="page-3">
+      <div class="container2">
+        <h2 class="instruction__caption caption">Эксплуатация</h2>
+        <table class="instruction__list">
+          <tr>
+            <td class="instruction__item__number">1</td>
+            <td class="instruction__item">Установите бесплатное приложение на телефон</td>
+          </tr>
+          <tr>
+            <td class="instruction__item__number">2</td>
+            <td class="instruction__item">Подключитесь к bluetooth куба</td>
+          </tr>
+          <tr>
+            <td class="instruction__item__number">3</td>
+            <td class="instruction__item">После успешного подключения используйте возможности приложения</td>
+          </tr>
+          <tr>
+            <td class="instruction__item__number">4</td>
+            <td class="instruction__item">Для более подробной информации обратитесь к руководству</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <section class="recall-page" ref="page-4">
+      <div class="container2">
+        <h2 class="recall__caption caption">Отзывы</h2>
+        <transition-group class="recall__slider" tag="div" name="slider" mode="out-in">
+          <article class="recall__item" key="article1" v-show="article == 0">
+            <div class="recall__top">
+              <img src="image/photo1.png" class="recall__photo">
+              <span class="recal__name">Грегорий Герасименко</span>
+            </div>
+            <p class="recall__text">Проектор оправдывает описание, все чётко и понятно, а главное правда</p>
+          </article>
+          <article class="recall__item" key="article2" v-show="article == 1">
+            <div class="recall__top">
+              <img src="image/photo2.png" class="recall__photo">
+              <span class="recal__name">Анастасия Комарова</span>
+            </div>
+            <p class="recall__text">Никогда себе такого не представляла, очень прикольное устройство</p>
+          </article>
+          <article class="recall__item" key="article3" v-show="article == 2">
+            <div class="recall__top">
+              <img src="image/photo3.png" class="recall__photo">
+              <span class="recal__name">Никита Кудинов</span>
+            </div>
+            <p class="recall__text">Этот продукт обязателен для тех, кто любит вечеринки</p>
+          </article>
+          <article class="recall__item" key="article4" v-show="article == 3">
+            <div class="recall__top">
+              <img src="image/photo4.png" class="recall__photo">
+              <span class="recal__name">Юлия Шорохова</span>
+            </div>
+            <p class="recall__text">Настраивается мгновенно, светит четко и ярко, проецирует линии просто идеальные</p>
+          </article>
+          <article class="recall__item" key="article5" v-show="article == 4">
+            <div class="recall__top">
+              <img src="image/photo5.png" class="recall__photo">
+              <span class="recal__name">Семен Краснов</span>
+            </div>
+            <p class="recall__text">Работать с лазер кубом, я так его назвал, одно удовольствие</p>
+          </article>
+        </transition-group>
+        <button class="slider-button slider-button-left" @click="previous"><</button>
+        <img class="slider-button__border" src="image/sliderButton.png">
+        <button class="slider-button slider-button-right" @click="next">></button>
+        <img class="slider-button__border slider-button__border2" src="image/sliderButton.png">
+      </div>
+    </section>
+    <section class="contacts-page" ref="page-5">
+      <div class="container2">
+        <h2 class="contacts__caption caption">Контакты</h2>
+        <div class="contacts__content">
+          <div class="contacts__society">
+            <div class="society__item">
+              <img src="image/whats.png">
+              <span>
+                Whatsapp<br>
+                <span class="contacts__number">+7(999) 999 99 99</span>
+              </span>
+            </div>
+            <div class="society__item">
+              <img src="image/email.png">
+              <span>
+                E-mail
+                <span class="contacts__number">kupi.menua@gmail.com</span>
+              </span>
+            </div>
+          </div>
+          <label class="form-label" for="contacts__form">Сделайте заказ сейчас и получите что-то крутое</label>
+          <form class="contacts__form" action="mail.php" method="POST">
+            <input class="contacts__input" type="text" placeholder="Имя/Фамилия" @click="formChange(0)" name="user_name"><br>
+            <img class="form__background" src="image/formBgPcOff.png">
+            <input class="contacts__input" type="text" placeholder="E-mail" @click="formChange(1)" name="user_email">
+            <img class="form__background form__background2" src="image/formBgPcOff.png">
+            <button class="contacts__input contacts__button" type="submit">Заказать</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="script.js" defer></script>
+  <script src="scroll.js"></script>
+  <script src="variable.js" defer></script>
+</body>
+</html>
